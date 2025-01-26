@@ -3,7 +3,7 @@ bison_exe = find_program('bison', native: true)
 
 flex_gen = generator(flex_exe,
     output: '@BASENAME@.yy.c',
-    arguments: ['-P@BASENAME@_yy', '@EXTRA_ARGS@', '-o@OUTPUT@', '@INPUT@']
+    arguments: ['--nowarn', '-P@BASENAME@_yy', '@EXTRA_ARGS@', '-o@OUTPUT@', '@INPUT@']
 )
 
 bison_gen = generator(bison_exe,
