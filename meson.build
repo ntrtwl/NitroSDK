@@ -41,6 +41,11 @@ if mwrap_ver != 'default'
     c_args += ['-wrap:ver', mwrap_ver]
 endif
 
+mwrap_sdk = get_option('mwrap_sdk')
+if mwrap_sdk != 'default'
+  c_args += ['-wrap:sdk', mwrap_sdk]
+endif
+
 if get_option('sp1p3_conditionals')
     c_args += '-DSP1P3_BUG_FOR_CONDITIONAL_ASM_INSTRUCTIONS'
 endif
