@@ -2,8 +2,16 @@ subdir('src')
 
 libcard_includes = include_directories('include')
 
+mwrap_patch3_libs = get_option('mwrap_patch3_libs')
+libcard_c_args = []
+if mwrap_patch3_libs != 'default'
+    libcard_c_args += ['-wrap:sdk', mwrap_patch3_libs]
+    libcard_c_args += ['-USP1P3_BUG_FOR_CONDITIONAL_ASM_INSTRUCTIONS']
+endif
+
 libcard = library('card',
     c_pch: nitro_pch,
+    c_args: libcard_c_args,
     include_directories: [nitrosdk_includes, libcard_includes],
     pic: false,
     sources: [libcard_srcs, fx_const_h],
