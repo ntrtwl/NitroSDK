@@ -32,8 +32,15 @@ c_args = [
     '-nosyspath',
     '-stdinc'
 ]
+
+asm_args = [
+    '-proc', 'arm5TE',
+    '-16',
+    '-gccinc'
+]
 else
 c_args = []
+asm_args = []
 endif
 
 mwrap_ver = get_option('mwrap_ver')
