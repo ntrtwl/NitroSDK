@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     {
         fprintf(stderr,
                 "NITRO-SDK Development Tool - makelcf - Make linker command file\n"
-                "Build %lu\n\n"
+                "Build %s\n\n"
                 "Usage:  makelcf [-DNAME=VALUE...] [-MDEFINES_FILE] [-TTARGET_NAME] [-V1|-V2] SPECFILE LCF-TEMPALTE [LCFILE]\n\n",
                 __DATE__);
     }
