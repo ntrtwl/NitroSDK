@@ -88,6 +88,25 @@ typedef enum {
 #define CARD_PXI_COMMAND_TERMINATE         0x0001
 #define CARD_PXI_COMMAND_PULLED_OUT        0x0011
 
+#define CSPI_CONTINUOUS_ON           0x0040
+#define CSPI_CONTINUOUS_OFF          0x0000
+
+#define MCCNT0_SPI_CLK_MASK    0x0003
+#define MCCNT0_SPI_CLK_4M      0x0000
+#define MCCNT0_SPI_CLK_2M      0x0001
+#define MCCNT0_SPI_CLK_1M      0x0002
+#define MCCNT0_SPI_CLK_524K    0x0003
+#define MCCNT0_SPI_BUSY        0x0080
+#define MMCNT0_SEL_MASK        0x2000
+#define MMCNT0_SEL_CARD        0x0000
+#define MMCNT0_SEL_SPI         0x2000
+#define MCCNT0_INT_MASK        0x4000
+#define MCCNT0_INT_ON          0x4000
+#define MCCNT0_INT_OFF         0x0000
+#define MCCNT0_MASTER_MASK     0x8000
+#define MCCNT0_MASTER_ON       0x8000
+#define MCCNT0_MASTER_OFF      0x0000
+
 #if defined(__cplusplus)
 extern  "C"
 {

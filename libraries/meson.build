@@ -30,7 +30,7 @@ subdir('utest')
 subdir('std')
 subdir('env')
 subdir('e3s')
-
+subdir('irc')
 
 subdir('cht')
 subdir('dgt')
