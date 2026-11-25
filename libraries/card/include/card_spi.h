@@ -1,9 +1,6 @@
 #ifndef __NITRO_CARD_SPI_H__
 #define __NITRO_CARD_SPI_H__
 
-#define CSPI_CONTINUOUS_ON           0x0040
-#define CSPI_CONTINUOUS_OFF          0x0000
-
 #define COMM_WRITE_STATUS            0x01
 #define COMM_PROGRAM_PAGE            0x02
 #define COMM_READ_ARRAY              0x03

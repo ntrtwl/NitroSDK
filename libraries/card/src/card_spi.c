@@ -3,22 +3,6 @@
 #include "../include/card_common.h"
 #include "../include/card_spi.h"
 
-#define MCCNT0_SPI_CLK_MASK    0x0003
-#define MCCNT0_SPI_CLK_4M      0x0000
-#define MCCNT0_SPI_CLK_2M      0x0001
-#define MCCNT0_SPI_CLK_1M      0x0002
-#define MCCNT0_SPI_CLK_524K    0x0003
-#define MCCNT0_SPI_BUSY        0x0080
-#define MMCNT0_SEL_MASK        0x2000
-#define MMCNT0_SEL_CARD        0x0000
-#define MMCNT0_SEL_SPI         0x2000
-#define MCCNT0_INT_MASK        0x4000
-#define MCCNT0_INT_ON          0x4000
-#define MCCNT0_INT_OFF         0x0000
-#define MCCNT0_MASTER_MASK     0x8000
-#define MCCNT0_MASTER_ON       0x8000
-#define MCCNT0_MASTER_OFF      0x0000
-
 typedef struct {
 	u32 rest_comm;
 	u32 src;
